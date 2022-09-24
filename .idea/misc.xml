@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/fridge_layout.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/kelly/AndroidStudioProjects/CS371M_Lab3_Fridge/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/kelly/AndroidStudioProjects/CS371M_Lab3_Fridge/app/src/main/res/layout/add_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/kelly/AndroidStudioProjects/CS371M_Lab3_Fridge/app/src/main/res/layout/fridge_layout.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>
