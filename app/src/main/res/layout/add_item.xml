@@ -11,36 +11,36 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
         android:text="Add Item"
         android:textSize="36sp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="75dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteY="73dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="125dp"
         android:layout_height="125dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
         app:srcCompat="@drawable/fruits"
         tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        android:layout_marginEnd="30dp"/>
+        tools:layout_editor_absoluteY="100dp" />
 
     <TextView
         android:id="@+id/text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/input_name"
-        app:layout_constraintTop_toBottomOf="@id/title"/>
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
     <EditText
         android:id="@+id/input_name"
@@ -48,23 +48,17 @@
         android:layout_height="wrap_content"
         android:hint="Input"
         android:inputType="text"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/text_type"
-        app:layout_constraintTop_toBottomOf="@id/text_name"
-        />
+        app:layout_constraintStart_toStartOf="@id/text_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
 
     <TextView
         android:id="@+id/text_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Type"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="289dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+        android:text="Type"
+        app:layout_constraintStart_toStartOf="@id/input_name"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
 
     <RadioGroup
         android:id="@+id/type_options"
@@ -72,8 +66,7 @@
         android:layout_height="wrap_content"
         android:checkedButton="@id/option_fruit"
         android:orientation="horizontal"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_type"
         app:layout_constraintTop_toBottomOf="@id/text_type">
 
         <RadioButton
@@ -112,13 +105,10 @@
         android:id="@+id/text_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/type_options"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="396dp" />
+        android:text="Quantity"
+        app:layout_constraintStart_toStartOf="@id/type_options"
+        app:layout_constraintTop_toBottomOf="@id/type_options" />
 
     <EditText
         android:id="@+id/input_quantity"
@@ -126,19 +116,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Input"
-        android:layout_marginStart="30dp"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_quantity"/>
+        app:layout_constraintStart_toStartOf="@id/text_quantity"
+        app:layout_constraintTop_toBottomOf="@id/text_quantity" />
 
     <TextView
         android:id="@+id/text_exp_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expiration Date"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        android:text="Expiration Date"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_quantity"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="495dp" />
@@ -149,34 +138,29 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Input"
-        android:layout_marginStart="30dp"
         android:inputType="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_exp_date"/>
+        app:layout_constraintStart_toStartOf="@id/text_exp_date"
+        app:layout_constraintTop_toBottomOf="@id/text_exp_date" />
 
     <Button
         android:id="@+id/button_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Done"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="632dp"
         android:layout_marginBottom="50dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/button_cancel"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel"
-        tools:layout_editor_absoluteX="232dp"
-        tools:layout_editor_absoluteY="632dp"
-        app:layout_constraintStart_toEndOf="@id/button_done"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_done" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
