@@ -25,11 +25,77 @@
         android:text="Welcome to your fridge!"
         app:layout_constraintBottom_toBottomOf="@id/add_item_button"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/welcome_message"
+        android:layout_marginTop="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/agent_image"
+                android:layout_width="wrap_content"
+                android:layout_height="194dp"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/agent_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:text=""
+                app:layout_constraintTop_toBottomOf="@id/agent_image"
+                app:layout_constraintBottom_toTopOf="@id/agent_nationality"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+            <TextView
+                android:id="@+id/agent_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.974"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/agent_nationality">
+
+            </TextView>
+            <TextView
+                android:id="@+id/agent_nationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <!--
-    Commented this out, but left it here in case it's needed -Mariana
+    This is what was in the file before I edited it, left it here in case it's needed -Mariana
 
     <?xml version="1.0" encoding="utf-8"?>
 
