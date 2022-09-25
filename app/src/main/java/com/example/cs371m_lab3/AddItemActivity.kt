@@ -5,17 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+class AddItemActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_add_item)
 
-        // Set listener to know when to move on to next activity (fridge layout)
-        val button = findViewById<Button>(R.id.open_fridge_button)
+        // Set listener to cancel button, result: go back to fridge layout without any chages
+        val button = findViewById<Button>(R.id.button_cancel)
         button.setOnClickListener(){
             val intent = Intent(this, FridgeLayout::class.java)
             startActivity(intent)
-            finish()
         }
     }
 }

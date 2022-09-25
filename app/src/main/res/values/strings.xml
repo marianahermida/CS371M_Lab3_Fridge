@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CS 371M - Lab 3</string>
     <string name="fridgefriend">FridgeFriend</string>
+    <string name="click_message">Click the fridge to see what\'s inside!</string>
 </resources>
