@@ -24,7 +24,7 @@ class AddItemActivity : AppCompatActivity() {
         }
 
         // Set listener to done to take the input from edittext objects and put them in the list
-        val doneButton = findViewById<Button>(R.id.button_cancel)
+        val doneButton = findViewById<Button>(R.id.button_done)
         doneButton.setOnClickListener(){
             val nameET = findViewById<View>(R.id.input_name) as EditText
             val foodName = nameET.text.toString()
