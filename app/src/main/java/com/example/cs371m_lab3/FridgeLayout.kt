@@ -25,17 +25,8 @@ class FridgeLayout : AppCompatActivity() {
         // this creates a vertical layout Manager
         recyclerview.layoutManager = LinearLayoutManager(this)
 
-        // ArrayList of class ItemsViewModel
-        val data = ArrayList<FoodData>()
-
-        // This loop will create 20 Views containing
-        // the image with the count of view
-//        for (i in 1..20) {
-//            data.add(FoodData())
-//        }
-
         // This will pass the ArrayList to our Adapter
-        val adapter = FoodCardAdapter(data)
+        val adapter = FoodCardAdapter()
 
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter

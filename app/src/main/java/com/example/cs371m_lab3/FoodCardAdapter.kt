@@ -13,7 +13,6 @@ import com.example.cs371m_lab3.FridgeLayout
 import com.example.cs371m_lab3.DataSource
 
 class FoodCardAdapter (
-    private val mList: List<FoodData>
     ): RecyclerView.Adapter<FoodCardAdapter.FoodCardViewHolder>() {
 
         private val data = DataSource.foods
@@ -36,7 +35,7 @@ class FoodCardAdapter (
 //                    LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item, parent, false)
 //                }
 //            }
-            val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.activity_fridge_layout, parent, false)
+            val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.card_view_layout, parent, false)
 
             return FoodCardViewHolder(adapterLayout)
         }
