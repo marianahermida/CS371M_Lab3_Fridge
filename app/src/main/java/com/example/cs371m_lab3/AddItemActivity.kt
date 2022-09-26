@@ -49,6 +49,9 @@ class AddItemActivity : AppCompatActivity() {
             }
 
             foodList.add(FoodData(foodType,foodName,foodCount,foodExpire))
+
+            val intent2 = Intent(this,FridgeLayout::class.java)
+            startActivity(intent2)
         }
     }
 }
