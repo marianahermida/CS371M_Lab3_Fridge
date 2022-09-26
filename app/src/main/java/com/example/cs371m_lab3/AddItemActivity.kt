@@ -10,7 +10,7 @@ class AddItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_item)
 
-        // Set listener to cancel button, result: go back to fridge layout without any chages
+        // Set listener to cancel button, result: go back to fridge layout without any changes
         val button = findViewById<Button>(R.id.button_cancel)
         button.setOnClickListener(){
             val intent = Intent(this, FridgeLayout::class.java)
