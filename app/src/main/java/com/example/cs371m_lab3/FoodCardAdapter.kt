@@ -13,8 +13,7 @@ import com.example.cs371m_lab3.FridgeLayout
 import com.example.cs371m_lab3.DataSource
 
 class FoodCardAdapter (
-    private val context: Context?,
-    private val layout: Int
+    private val mList: List<FoodData>
     ): RecyclerView.Adapter<FoodCardAdapter.FoodCardViewHolder>() {
 
         private val data = DataSource.foods
@@ -45,12 +44,11 @@ class FoodCardAdapter (
         override fun getItemCount(): Int = data.size
 
         override fun onBindViewHolder(holder: FoodCardViewHolder, position: Int) {
-            val resources = context?.resources
             val thisFood = data[position]
             holder.foodImage.setImageResource(thisFood.imageResourceId)
             holder.foodName.text = thisFood.name
-            holder.foodQuantity.text = resources?.getString(R.string.food_quantity, thisFood.quantity)
-            holder.foodExpiration.text = resources?.getString(R.string.food_expiration_date, thisFood.expiration_date)
+            holder.foodQuantity.text = thisFood.quantity
+            holder.foodExpiration.text = thisFood.expiration_date
 
         }
 }

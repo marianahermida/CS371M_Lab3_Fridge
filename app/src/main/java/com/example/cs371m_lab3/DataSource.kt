@@ -4,7 +4,7 @@ object DataSource {
 
     val foods: MutableList<FoodData> = mutableListOf(
         FoodData(
-            R.drawable.dairy_products,
+            R.drawable.dairy,
             "Dairy",
             "2",
             "10/8"

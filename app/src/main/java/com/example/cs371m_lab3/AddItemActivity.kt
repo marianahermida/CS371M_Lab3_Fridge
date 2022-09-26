@@ -39,13 +39,12 @@ class AddItemActivity : AppCompatActivity() {
             val selectedOption: Int = radioGroup!!.checkedRadioButtonId
             val radioButton: RadioButton = findViewById(selectedOption)
 
-            var foodType = 5
+            var foodType = R.drawable.fruits
             when (radioButton.text){
-                "Fruit"-> foodType = 1
-                "Vegetable"-> foodType = 2
-                "Meat"-> foodType = 3
-                "Dairy"-> foodType = 4
-                "Other"-> foodType = 5
+                "Fruit"-> foodType = R.drawable.fruits
+                "Vegetable"-> foodType = R.drawable.vegetable
+                "Meat"-> foodType = R.drawable.proteins
+                "Dairy"-> foodType = R.drawable.dairy
             }
 
             foodList.add(FoodData(foodType,foodName,foodCount,foodExpire))
