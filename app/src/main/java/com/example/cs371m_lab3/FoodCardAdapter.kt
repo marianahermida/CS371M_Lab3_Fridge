@@ -27,8 +27,8 @@ class FoodCardAdapter (
 
         }
 
-//        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodCardViewHolder {
-//
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodCardViewHolder {
+
 //            val adapterLayout = when(layout){
 //                Layout.GRID -> {
 //                    LayoutInflater.from(parent.context).inflate(R.layout.grid_list_item, parent, false)
@@ -37,9 +37,10 @@ class FoodCardAdapter (
 //                    LayoutInflater.from(parent.context).inflate(R.layout.vertical_horizontal_list_item, parent, false)
 //                }
 //            }
-//
-//            return DogCardViewHolder(adapterLayout)
-//        }
+            val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.activity_fridge_layout, parent, false)
+
+            return FoodCardViewHolder(adapterLayout)
+        }
 
         override fun getItemCount(): Int = data.size
 
@@ -49,7 +50,7 @@ class FoodCardAdapter (
             holder.foodImage.setImageResource(thisFood.imageResourceId)
             holder.foodName.text = thisFood.name
             holder.foodQuantity.text = resources?.getString(R.string.food_quantity, thisFood.quantity)
-            holder.foodExpiration.text = resources?.getString(R.string.food_expiration, thisFood.expiration_date)
+            holder.foodExpiration.text = resources?.getString(R.string.food_expiration_date, thisFood.expiration_date)
 
         }
 }
