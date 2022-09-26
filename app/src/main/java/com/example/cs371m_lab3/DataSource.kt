@@ -12,7 +12,7 @@ object DataSource {
         FoodData(
             R.drawable.fruits,
             "Fruit",
-            "2",
+            "1",
             "10/8"
         ),
         FoodData(
