@@ -16,5 +16,7 @@ class AddItemActivity : AppCompatActivity() {
             val intent = Intent(this, FridgeLayout::class.java)
             startActivity(intent)
         }
+
+
     }
 }
